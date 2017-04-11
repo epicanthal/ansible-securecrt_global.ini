@@ -1,0 +1,12 @@
+---
+
+# Do not disconnect sessions when sleeping or closing lid on Macbook
+#   https://forums.vandyke.com/showthread.php?t=10541
+# D:"Disconnect After Resume Timeout"=00000000 (default) --> FFFFFFFF
+- name: set D:"Disconnect After Resume Timeout"=FFFFFFFF
+  lineinfile:
+    dest: "{{ Global_ini_path }}"
+    state: present
+    regexp: 'D:"Disconnect After Resume Timeout.+'
+    line: 'D:"Disconnect After Resume Timeout"=FFFFFFFF'
+    backup: yes

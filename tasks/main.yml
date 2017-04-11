@@ -1,0 +1,20 @@
+---
+# Modify SecureCRT Global.ini settings
+
+  - name: set 'Global_ini_path' fact
+    set_fact: Global_ini_path="/Users/{{ ansible_user_id }}/Library/Application Support/VanDyke/SecureCRT/Config/Global.ini"
+
+  # - name: dump Global_ini_path
+  #   debug: var=Global_ini_path
+
+  - name: check current status of {{ Global_ini_path }}
+    stat:
+      path: "{{ Global_ini_path }}"
+    register: SecureCRT_Global_ini_stat
+
+  # - name: dump 'SecureCRT_Global_ini_stat'
+  #   debug: var=SecureCRT_Global_ini_stat
+
+  - name: include 'Global_ini_lines.yml'
+    include: Global_ini_lines.yml
+    when: SecureCRT_Global_ini_stat.stat.exists == true
