@@ -10,10 +10,10 @@ galaxy_info:
     - all
   #  - 10.12
   - name: Windows
-    - all
     versions:
+    - all
   galaxy_tags:
     - macos
     - windows
     - securecrt
-#dependencies:
+dependencies:
