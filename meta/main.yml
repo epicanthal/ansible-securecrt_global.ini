@@ -16,4 +16,4 @@ galaxy_info:
     - macos
     - windows
     - securecrt
-dependencies:
+#dependencies:
