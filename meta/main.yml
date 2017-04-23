@@ -1,0 +1,21 @@
+galaxy_info:
+  author: epicanthal
+  description: Modify SecureCRT Gobal.ini
+  company:
+  license: license BSD
+  min_ansible_version: 1.8
+  platforms:
+  - name: MacOSX
+    versions:
+    - all
+  #  - 10.12
+  - name: Windows
+    versions:
+  galaxy_tags:
+    - MacOSX
+    - Windows
+    - SecureCRT
+dependencies: []
+  # List your role dependencies here, one per line.
+  # Be sure to remove the '[]' above if you add dependencies
+  # to this list.

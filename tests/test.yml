@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+  roles:
+    - securecrt_global_ini
